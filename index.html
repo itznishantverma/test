@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deshbandhu College</title>
+    <style>
+        * {box-sizing: border-box;}
+        body {font-family: Verdana, sans-serif;}
+        .mySlides {display: none;}
+        img {vertical-align: middle;}
+        
+        /* Slideshow container */
+        .slideshow-container {
+          max-width: 1000px;
+          position: relative;
+          margin: 0px;
+        }
+        
+        /* Caption text */
+        .text {
+          color: #f2f2f2;
+          font-size: 15px;
+          padding: 8px 12px;
+          position: absolute;
+          bottom: 8px;
+          width: 100%;
+          text-align: center;
+        }
+        
+        /* Number text (1/3 etc) */
+        .numbertext {
+          color: #f2f2f2;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
+        
+        /* The dots/bullets/indicators */
+        .dot {
+          height: 15px;
+          width: 15px;
+          margin: 0 0px;
+          background-color: #bbb;
+          border-radius: 50%;
+          display: inline-block;
+          transition: background-color 0.6s ease;
+        }
+        
+        .active {
+          background-color: #717171;
+        }
+        
+        /* Fading animation */
+        .fade {
+          animation-name: fade;
+          animation-duration: 1.5s;
+        }
+        
+        @keyframes fade {
+          from {opacity: .4} 
+          to {opacity: 1}
+        }
+        
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+          .text {font-size: 11px}
+        }
+        </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+
+        <div class="top">
+            <div class="nav-address"><i class="fa-solid fa-location-dot"></i>
+                <p class="head"> Kalkaji Main Rd, Block H, Kalkaji, New Delhi, 19</p>
+            </div>
+            <div class="nav-phone">
+                <i class="fa-solid fa-phone"></i>
+                <p class="head">011- 264 39565, Fax No :- 011-262 35542</p>
+            </div>
+            <div class="lang">
+
+                <select>
+                    <option>Select Language</option> <option>Afrikaans</option> <option>Albanian</option> <option>Amharic</option> <option>Arabic</option> <option>Armenian</option> <option>Assamese</option> 
+                    <option>Aymara</option> <option>Azerbaijani</option> <option>Bambara</option> <option>Basque</option> <option>Belarusian</option> <option>Bengali</option> <option>Bhojpuri</option>
+                    <option>Bosnian</option> <option>Bulgarian</option> <option>Catalan</option> <option>Cebuano</option> <option>Chichewa</option> <option>Chinese (Simplified)</option> <option>Chinese (Traditional)</option> 
+                    <option>Corsican</option> <option>Croatian</option> <option>Czech</option> <option>Danish</option> <option>Dhivehi</option> <option>Dogri</option> <option>Dutch</option> <option>Esperanto</option> 
+                    <option>Estonian</option> <option>Ewe</option> <option>Filipino</option> <option>Finnish</option> <option>French</option> <option>Frisian</option> <option>Galician</option> <option>Georgian</option> 
+                    <option>German</option> <option>Greek</option> <option>Guarani</option> <option>Gujarati</option> <option>Haitian Creole</option> <option>Hausa</option> <option>Hawaiian</option> <option>Hebrew</option> 
+                    <option>Hindi</option> <option>Hmong</option> <option>Hungarian</option> <option>Icelandic</option> <option>Igbo</option> <option>Ilocano</option> <option>Indonesian</option> <option>Irish Gaelic</option>
+                    <option>Italian</option> <option>Japanese</option> <option>Javanese</option> <option>Kannada</option> <option>Kazakh</option> <option>Khmer</option> <option>Kinyarwanda</option> <option>Konkani</option> 
+                    <option>Korean</option> <option>Krio</option> <option>Kurdish (Kurmanji)</option> <option>Kurdish (Sorani)</option> <option>Kyrgyz</option> <option>Lao</option> <option>Latin</option> <option>Latvian</option> 
+                    <option>Lingala</option> <option>Lithuanian</option> <option>Luganda</option> <option>Luxembourgish</option> <option>Macedonian</option> <option>Maithili</option> <option>Malagasy</option> <option>Malay</option> 
+                    <option>Malayalam</option> <option>Maltese</option> <option>Maori</option> <option>Marathi</option> <option>Meiteilon (Manipuri)</option> <option>Mizo</option> <option>Mongolian</option> <option>Myanmar (Burmese)</option> 
+                    <option>Nepali</option> <option>Norwegian</option> <option>Odia (Oriya)</option> <option>Oromo</option> <option>Pashto</option> <option>Persian</option> <option>Polish</option> <option>Portuguese</option> 
+                    <option>Punjabi</option> <option>Quechua</option> <option>Romanian</option> <option>Russian</option> <option>Samoan</option> <option>Sanskrit</option> <option>Scots Gaelic</option> <option>Sepedi</option> <option>Serbian</option>
+                    <option>Sesotho</option> <option>Shona</option> <option>Sindhi</option> <option>Sinhala</option> <option>Slovak</option> <option>Slovenian</option> <option>Somali</option> <option>Spanish</option>
+                    <option>Sundanese</option> <option>Swahili</option> <option>Swedish</option> <option>Tajik</option> <option>Tamil</option> <option>Tatar</option> <option>Telugu</option> <option>Thai</option>
+                    <option>Tigrinya</option> <option>Tsonga</option> <option>Turkish</option> <option>Turkmen</option> <option>Twi</option> <option>Ukrainian</option> <option>Urdu</option> <option>Uyghur</option> <option>Uzbek</option> 
+                    <option>Vietnamese</option> <option>Welsh</option> <option>Xhosa</option> <option>Yiddish</option> <option>Yoruba</option> <option>Zulu</option>
+                </select>
+
+            </div>
+            <div class="login">
+                <div class="fac-login">
+                <a class="top-link" href="https://deshbandhucollege.ac.in/facultylogin.php" >Faculty Login</a>
+            </div>
+            <div class="stu-login">
+                <a href="https://deshbandhucollege.in/Internet/Student/Login.aspx" class="top-link">Student Login</a>
+            </div>
+            <div class="hindi">
+                <p class="text-hindi">Hindi</p>
+            </div>
+            </div>
+        </div>
+        <div class="navbar">
+            <div class="nav-logo">
+                <div class="logo">
+                    <img class="log" src="logo.jpg">
+                </div>
+            </div>
+            <div class="nav-details">
+                <div class="homel">
+                    <i class="fa-solid fa-house-chimney" class="home2" ></i>
+                </div>
+                <div class="nav-about">
+                    <p>About us</p>
+                </div>
+                <div class="nav-admission">
+                    <p>ADMISSION</p>
+                </div>
+                <div class="nav-acad">
+                    <p>ACADEMICS</p>
+                </div>
+                <div class="nav-res">
+                    <p>RESEARCH</p>
+                </div>
+                <div class="nav-lib">
+                    <p>LIBRARY</p>
+                </div>
+                <div class="nav-stu">
+                    <p>STUDENTS</p>
+                </div>
+                <div class="nav-alumni">
+                    <p>ALUMNI</p>
+                </div>
+                <div class="nav-admin">
+                    <p>ADMINISTRATION</p>
+                </div>
+                <div class="nav-feed">
+                    <p>FEEDBACK</p>
+                </div>
+                <div class="nav-icc">
+                    <p>ICC</p>
+                </div>
+                <div class="nav-contact">
+                    <p>CONTACT</p>
+                </div>
+            </div>
+        </div>
+        <div class="hlo">
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                  <img src="s1.jpg" style="width:100%">
+                </div>
+                
+                <div class="mySlides fade">
+                  <img src="s2.jpg" style="width:100%">
+                </div>
+                
+                <div class="mySlides fade">
+                  <img src="s3.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="s4.jpg" style="width:100%">
+                  </div>
+                
+                </div>
+                <br>
+                
+                <div hidden style="text-align:center">
+                  <span class="dot"></span> 
+                  <span class="dot"></span>
+                  <span class="dot"></span> 
+                  <span class="dot"></span> 
+                </div>
+                
+                <script>
+                let slideIndex = 0;
+                showSlides();
+                
+                function showSlides() {
+                  let i;
+                  let slides = document.getElementsByClassName("mySlides");
+                  let dots = document.getElementsByClassName("dot");
+                  for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                  }
+                  slideIndex++;
+                  if (slideIndex > slides.length) {slideIndex = 1}    
+                  for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                  setTimeout(showSlides, 2000); // Change image every 2 seconds
+                }
+                </script>
+            <div class="slide">
+                <div class="mrqhead">
+                    <button class="mrq">
+                        <p class="nm">Latest News</p>
+                        <p class="nm1">View All</p>
+                    </button>
+                </div>
+                <marquee class="mark" scrollamount="3" direction="up" onmouseover="this.stop()" onmouseout="this.start()">
+                    <div class="announcement">
+                    <ul>
+                        <li> <a href="uploads/pdf/1702979442_Change_of_Venue__Interview_for_the_post_of_Principal.pdf" target="_blank"  class="cl">Change of Venue_ Interview for the post of Principal</a></li>
+                        <br>
+
+                                        
+                        <li> <a class="cl" href="uploads/pdf/1702884729_Notification.pdf" target="_blank">Interview Notification for the Post of Principal</a></li><br>
+
+                        
+                        <li> <a class="cl" href="uploads/pdf/1700645356_FLP.pdf" target="_blank">FINAL SHORTLISTED CANDIDATES FOR THE POST OF PRINCIPAL</a></li><br>
+
+                        
+                        <li> <a class="cl" href="uploads/pdf/1699771927_principal_app.pdf" target="_blank">Fwd: Notice regarding status of applicants for the Principal</a></li><br>
+
+                        
+                        <li> <a class="cl" href="uploads/pdf/1699682057_notice.pdf" target="_blank">College will remain closed on 13th Nov on occasion of Deepawali</a></li><br>
+
+                        
+                        <li> <a class="cl" href="uploads/pdf/1699682054_notice.pdf" target="_blank">College will remain closed on 13th Nov on occasion of Deepawali</a></li><br>
+
+                        <li> <a class="cl" href="1698221706_NOTICE_NO._60_DATED_05.09.2023.pdf" target="_blank">NOTICE NO. 60 DATED 05.09.2023</a></li><br>
+
+                        
+                        <li> <a class="cl" href="uploads/pdf/1697543529_final_not_prin.pdf" target="_blank">NOTICE - REGARDING POST OF THE PRINCIPAL</a></li><br>
+
+                        
+                        <li> <a class="cl" href="uploads/pdf/1697260151_not.pdf" target="_blank">Advt. Guest Faculty Philosophy and Physical Education</a></li><br>
+
+                        
+                        <li> <a class="cl" href="uploads/pdf/1697260107_COACHES.jpg" target="_blank">APPLICATIONS ARE INVITED FOR APPOINTMENT OF PART TIME SPORTS COACH</a></li><br>
+                    </ul>
+                </div>
+                </marquee>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="images">
+        <div class="img1">
+            <img class="i1" src="img.png">
+        </div>
+    </div>
+    <div class="inf">
+        <div class="wlcm-bar">
+            <p><b>Welcome to<p class="red"> Deshbandhu College</p></b></p>
+        </div>
+        <div class="inf2">
+            <div class="img70">
+                <img src="70yrs.jpeg" alt="" style="margin-top: 10px;" class="img7">
+            </div>
+            <div class="extra">
+                <p style="margin-top: 60px;">
+                    DESHBANDHU COLLEGE was established in the year 1952 by the Ministry 
+                    of Rehabilitation, in the memory of Late LalaDeshbandhu Gupta - a veteran freedom 
+                    fighter. The college made a humble beginning with just 72 students and the 
+                    courses like Prep(arts), Prep(science) and Pre-medical. The college was transferred 
+                    to Ministry of Education and later taken over by the University of Delhi....<br>
+                    <button class="extra-btn">Read More</button>
+                </p>
+            </div>
+            <div class="img100">
+                <img src="100yrs.jpg" alt="" class="img10">
+            </div>
+        </div>
+    </div>
+
+    <div class="mid-bar">
+        <div class="prin">
+            <div class="line">
+
+            </div>
+            <p class="princ">FROM THE PRINCIPAL'S DESK</p>
+            <div class="line-2">
+
+            </div>
+            <img src="principal.jpg" class="prin-img">
+            <div class="prin-text"><b>Dear Students,</b><br>
+                "We shape minds and shape lives".<br>
+                
+                I extend a warm welcome to all the new and incoming students to Deshbandhu College.
+                Our college is one of the premier institutes of the University of Delhi with A++ NAAC 
+                rating and 17 all India NIRF ranking. I feel proud to share that in a journey of more 
+                than seven decades, our College has provided an environment of excellence in academics 
+                along with holistic development of our students.
+            </div>
+        </div>
+
+        <div class="nish">
+            <p class="stu-achiv">Student's Achievements</p>
+            <div class="mid-mrq1">
+                <mArquee class="mrq2" direction="up" scrollamount="3" onmouseout="this.start()" onmouseover="this.stop()">
+                    <table class="mrqtbl">
+                        <tr class="tr1">
+                            <td class="td1"><p class="date">14</p>MAR,2023</td>
+                            <td class="td2"><p class="tbltxt">UBA organizing Free Mega Health Camp in Chandan Hulla</p></td>
+                        </tr>
+                        <tr class="tr1">
+                            <td class="td1"><p class="date"></p></td>
+                            <td class="td2"><p class="tbltxt"></p></td>
+                        </tr>
+                        <tr class="tr1">
+                            <td class="td1"><p class="date"></p></td>
+                            <td class="td2"><p class="tbltxt"></p></td>
+                        </tr>
+                        <tr class="tr1">
+                            <td class="td1"><p class="date"></p></td>
+                            <td class="td2"><p class="tbltxt"></p></td>
+                        </tr>
+                        <tr class="tr1">
+                            <td class="td1"><p class="date"></p></td>
+                            <td class="td2"><p class="tbltxt"></p></td>
+                        </tr>
+                        <tr class="tr1">
+                            <td class="td1"><p class="date"></p></td>
+                            <td class="td2"><p class="tbltxt"></p></td>
+                        </tr>
+                        <tr class="tr1">
+                            <td class="td1"><p class="date"></p></td>
+                            <td class="td2"><p class="tbltxt"></p></td>
+                        </tr>
+                        <tr class="tr1">
+                            <td class="td1"><p class="date"></p></td>
+                            <td class="td2"><p class="tbltxt"></p></td>
+                        </tr>
+                        <tr class="tr1">
+                            <td class="td1"><p class="date"></p></td>
+                            <td class="td2"><p class="tbltxt"></p></td>
+                        </tr>
+                        <tr class="tr1">
+                            <td class="td1"><p class="date"></p></td>
+                            <td class="td2"><p class="tbltxt"></p></td>
+                        </tr>
+                    </table>
+                </mArquee>
+            </div>
+        </div>
+
+        <div class="nish">
+            <p class="stu-achiv">Notices</p>
+            <div class="mid-mrq2">
+                <marquee class="mrq3" direction="up">
+                    <table class="mrqtbl">
+                        <tr></tr>
+                        <tr></tr>
+                        <tr></tr>
+                        <tr></tr>
+                        <tr></tr>
+                        <tr></tr>
+                        <tr></tr>
+                        <tr></tr>
+                        <tr></tr>
+                        <tr></tr>
+                    </table>
+                </marquee>
+            </div>
+        </div>
+
+    </div>
+         
+</body>
+</html>
